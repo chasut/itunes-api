@@ -1,6 +1,4 @@
 #!/bin/sh
 
-cd "$(dirname "$0")/.."
-
 script/uninstall
 script/install
