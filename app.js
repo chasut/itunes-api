@@ -36,7 +36,13 @@ function getCurrentState(){
     currentState['name'] = currentTrack.name();
     currentState['artist'] = currentTrack.artist();
     currentState['album'] = currentTrack.album();
-    currentState['playlist'] = currentPlaylist.name();
+    
+    // If playing songs that are not in a playlist currentPlaylist.name throws an error.
+    try {
+    	currentState['playlist'] = currentPlaylist.name();
+	} catch (error) {
+	    currentState['playlist'] = ''; // or any default value
+	}
     currentState['volume'] = itunes.soundVolume();
     currentState['muted'] = itunes.mute();
     currentState['repeat'] = itunes.songRepeat();
