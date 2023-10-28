@@ -170,7 +170,7 @@ function getPlaylistsFromItunes(){
     data = {};
     data['id'] = playlist.id();
     data['name'] = playlist.name();
-    data['loved'] = playlist.loved();
+    data['loved'] = playlist.disliked();
     data['duration_in_seconds'] = playlist.duration();
     data['time'] = playlist.time();
     playlistNames.push(data);
