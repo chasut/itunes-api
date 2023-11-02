@@ -36,7 +36,9 @@ function getCurrentState(){
     currentState['name'] = currentTrack.name();
     currentState['artist'] = currentTrack.artist();
     currentState['album'] = currentTrack.album();
-    currentState['playlist'] = currentPlaylist.name();
+    
+    currentState['playlist'] = "";
+    
     currentState['volume'] = itunes.soundVolume();
     currentState['muted'] = itunes.mute();
     currentState['repeat'] = itunes.songRepeat();
